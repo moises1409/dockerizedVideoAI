@@ -30,7 +30,7 @@ jobs:
       uses: docker/build-push-action@v3
       with:
         push: true
-        tags: conainervideoai.azurecr.io/${{ secrets.AzureAppService_ContainerUsername_fff205c741364edb9c1020bd8ba59bd3 }}/flaskapp:${{ github.sha }}
+        tags: conainervideoai.azurecr.io/${{ secrets.AzureAppService_ContainerUsername_fff205c741364edb9c1020bd8ba59bd3 }}/flaskapp1.0.0:${{ github.sha }}
         file: ./backend/flask.dockerfile
 
   deploy:
