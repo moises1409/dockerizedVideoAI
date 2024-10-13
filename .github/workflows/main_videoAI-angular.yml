@@ -20,8 +20,8 @@ jobs:
       uses: docker/login-action@v2
       with:
         registry: https://conainervideoai.azurecr.io/
-        username: ${{ secrets.AZUREAPPSERVICE_CONTAINERUSERNAME_0C79308C903F4A27A1A770ED25F9CD4E }}
-        password: ${{ secrets.AZUREAPPSERVICE_CONTAINERPASSWORD_0C79308C903F4A27A1A770ED25F9CD4E }}
+        username: ${{ secrets.AZUREAPPSERVICE_CONTAINERUSERNAME }}
+        password: ${{ secrets.AZUREAPPSERVICE_CONTAINERPASSWORD }}
 
     - name: Build and push container images using Docker Compose
       run: |
