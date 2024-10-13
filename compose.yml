@@ -1,0 +1,20 @@
+services:
+  angularapp:
+    container_name: angularapp
+    image: angularapp:1.0.0
+    build:
+      context: ./frontend
+      dockerfile: angular.dockerfile
+    ports:
+      - 3000:80
+    depends_on:
+      - flaskapp
+
+  flaskapp:
+    container_name: flaskapp
+    image: flaskapp:1.0.0
+    build:
+      context: ./backend
+      dockerfile: flask.dockerfile
+    ports:
+      - 4000:4000
