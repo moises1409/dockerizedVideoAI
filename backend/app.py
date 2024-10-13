@@ -11,4 +11,4 @@ CORS(app)
 @app.route("/test", methods=['GET'])
 def test():
     logging.debug("A ver que dasale")
-    return jsonify({'message': "Todos bien X"})
+    return jsonify({'message': "Todos bien Y4yy"})
